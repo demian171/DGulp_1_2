@@ -67,6 +67,7 @@ gulp.task("buildScss", buildScss);
 
 // Если же названия указаны в кавычках, то это - название тасок. Если эти таски не было созданы, то команда gulp moveFiles вызовет  ошибку
 gulp.task("moveFiles", gulp.parallel("buildScss", "moveIMG", "moveHtml"));
+gulp.task("build", gulp.parallel("buildScss", "moveIMG", "moveHtml"));
 
 
 gulp.task('serve', () => {
